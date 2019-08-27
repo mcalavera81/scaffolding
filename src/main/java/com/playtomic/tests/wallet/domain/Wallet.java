@@ -1,5 +1,6 @@
 package com.playtomic.tests.wallet.domain;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
@@ -14,7 +15,7 @@ import java.util.Objects;
 
 @Entity
 @ToString
-@Getter
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 public class Wallet {
     private static final BigDecimal ZERO = BigDecimal.ZERO;
     private static final String defaultCurrency = "EUR";

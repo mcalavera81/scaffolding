@@ -10,6 +10,7 @@ import static javax.money.Monetary.getCurrency;
 
 public class WalletTest {
 
+
     @Test
     public void deposit() {
         Wallet wallet = new Wallet();
@@ -56,7 +57,7 @@ public class WalletTest {
     public void notEnoughFundsWithdrawal() {
 
         Wallet wallet = new Wallet(new BigDecimal(100));
-        BigDecimal withdrawal = new BigDecimal(100);
+        BigDecimal withdrawal = new BigDecimal(101);
 
         wallet.withdraw(withdrawal);
 
